@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
+		
+		@-webkit-keyframes latido
+		{
+			0% /* from */
+			{
+				-webkit-transform: scale(.5,.5) rotate(0deg);
+			}
+
+			25%
+			{
+				-webkit-transform: scale(2,2) rotate(0deg);
+			}
+
+			50%
+			{
+				-webkit-transform: scale(3,3) rotate(-15deg);
+			}
+
+			75%
+			{
+				-webkit-transform: scale(1,1) rotate(5deg);
+			}
+
+
+			100% /* to */
+			{
+				-webkit-transform: scale(4,4) rotate(0deg);
+			}
+		}
+
+		body
+		{
+			font-family: 'Protest Riot', sans-serif;
+			
+            background-image: url(rania.jpg);
+            
+            
+			font-size:16px;
+			text-align:center;
+		}
+
+		h1{
+			-webkit-animation:latido 3s infinite 1.5s alternate ease;
+			-webkit-animation-play-state: running;
+			color: cornsilk;
+			text-shadow: 1px 1px 2px black;
+			font-size: 2em;
+			left: 47.7%;
+			position: fixed;
+			top: 45.7%;
+			z-index: 2;
+		}
+
+		h2
+		{
+			font-size: 70px;
+			
+			text-shadow: 2px 2px 5px cornsilk;
+            margin-top: 200px;
+            color: rgb(217, 0, 255);
+			width: 100vmin;
+  			margin-top: 440px;
+
+		}
+
+		
+		
+
+       #corazon
+       {
+			/*
+			animation: nombre duracion numVeces retardo dirección tipoAceleracion
+			Dirección: normal, alternante
+			Tipos de aceleracion : ease, linear, ease-in, ease-out, ease-in-out, cubic-bezier(n,n,n,n) donde n va de 0 a 1 Estado de la animación: running o paused
+			*/
+			-webkit-animation:latido 3s infinite 1.5s alternate ease;
+			-webkit-animation-play-state: running;
+			left: 43%;
+			height: 200px;
+			position: fixed;
+			top: 45%;
+			width: 200px;
+			z-index: 1;
+
+       }
+
+       #corazon:after, #corazon:before
+       {
+       		background:rgb(217, 0, 255);
+       		border-radius: 50px 50px 0 0;
+       		content: "";
+       		height: 160px;
+       		left: 100px;
+       		position: absolute;
+       		-webkit-transform:rotate(-45deg);
+       		-webkit-transform-origin: 0 100%;
+       		width: 100px;
+       }
+
+       #corazon:after
+       {
+       		left: 0;
+       		-webkit-transform:rotate(45deg);
+       		-webkit-transform-origin: 100% 100%;
+       }
+
+      
